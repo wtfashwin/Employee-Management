@@ -1,4 +1,5 @@
-import React from 'react'
+import { employeeType } from '../../propTypes'
+import PropTypes from 'prop-types'
 import Header from '../other/Header'
 import TaskListNumbers from '../other/TaskListNumbers'
 import TaskList from '../TaskList/TaskList'
@@ -14,5 +15,7 @@ const EmployeeDashboard = (props) => {
     </div>
   )
 }
+
+EmployeeDashboard.propTypes = { changeUser: PropTypes.func.isRequired, data: employeeType.isRequired }
 
 export default EmployeeDashboard

@@ -1,7 +1,8 @@
-import React, { createContext, useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { getLocalStorage, setLocalStorage } from '../utils/localStorage'
 
-export const AuthContext = createContext()
+import PropTypes from 'prop-types'
+import { AuthContext } from './AuthContext'
 
 const AuthProvider = ({ children }) => {
     // localStorage.clear()
@@ -24,5 +25,7 @@ const AuthProvider = ({ children }) => {
         </div>
     )
 }
+
+AuthProvider.propTypes = { children: PropTypes.node.isRequired }
 
 export default AuthProvider
