@@ -1,4 +1,4 @@
-import React from 'react'
+import { employeeType } from '../../propTypes'
 
 const TaskListNumbers = ({data}) => {
   return (
@@ -23,5 +23,7 @@ const TaskListNumbers = ({data}) => {
     </div>
   )
 }
+
+TaskListNumbers.propTypes = { data: employeeType.isRequired }
 
 export default TaskListNumbers

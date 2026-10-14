@@ -1,4 +1,4 @@
-import React from 'react'
+import { employeeType } from '../../propTypes'
 import AcceptTask from './AcceptTask'
 import NewTask from './NewTask'
 import CompleteTask from './CompleteTask'
@@ -25,5 +25,7 @@ const TaskList = ({ data }) => {
         </div>
     )
 }
+
+TaskList.propTypes = { data: employeeType.isRequired }
 
 export default TaskList

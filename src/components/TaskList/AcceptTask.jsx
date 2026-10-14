@@ -1,4 +1,4 @@
-import React from 'react'
+import { taskType } from '../../propTypes'
 
 const AcceptTask = ({data}) => {
     console.log();
@@ -19,5 +19,7 @@ const AcceptTask = ({data}) => {
         </div>
   )
 }
+
+AcceptTask.propTypes = { data: taskType.isRequired }
 
 export default AcceptTask

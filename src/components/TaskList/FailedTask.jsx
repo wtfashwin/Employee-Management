@@ -1,6 +1,6 @@
-import React from 'react'
+import { taskType } from '../../propTypes'
 
-const FailedTask = () => {
+const FailedTask = ({data}) => {
   return (
     <div className='flex-shrink-0 h-full w-[300px] p-5 bg-yellow-400 rounded-xl'>
             <div className='flex justify-between items-center'>
@@ -17,5 +17,7 @@ const FailedTask = () => {
         </div>
   )
 }
+
+FailedTask.propTypes = { data: taskType.isRequired }
 
 export default FailedTask
